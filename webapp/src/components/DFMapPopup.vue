@@ -71,7 +71,7 @@ const props = defineProps({
 const isFaceRecognition = computed(() => props.alpr.tags.brand === 'Avigilon');
 
 const cardinalDirection = computed(() => {
-  const direction = props.alpr.tags.direction || props.alpr.tags["camera:direction"];
+  const direction =  props.alpr.tags["camera:direction"] || props.alpr.tags.direction;
   if (direction === undefined) {
     return 'Unspecified Direction';
   } else if (direction.includes(';')) {
