@@ -84,7 +84,7 @@ const cardinalDirection = computed(() => {
 
 function degreesToCardinal(degrees: number): string {
   const cardinals = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
-  return 'Faces ' + cardinals[Math.round(degrees / 45) % 16];
+  return 'Faces ' + cardinals[Math.round(degrees / 22.5) % 16];
 }
 
 function osmNodeLink(id: string): string {
